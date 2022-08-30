@@ -40,7 +40,7 @@ function Drawer({ onClose, items = [], onRemove, opened }) {
     <div className={`${styles.overlay} ${opened ? styles.overlayVisible : ''}`}>
       <div className={styles.drawer}>
         <h2 className="mb-30 d-flex justify-between">
-          Корзина <img onClick={onClose} className="removeBtn cu-p" src={"/img/btn-remove.svg"} alt="remove"/>
+          Корзина <img onClick={onClose} className="removeBtn cu-p" src={"img/btn-remove.svg"} alt="remove"/>
         </h2>
 
         {
@@ -56,7 +56,7 @@ function Drawer({ onClose, items = [], onRemove, opened }) {
                         <p className="mb-5">{obj.title}</p>
                         <b>{obj.price} руб.</b>
                       </div>
-                      <img onClick={() => onRemove(obj.parentId)} className="removeBtn" src={"/img/btn-remove.svg"} alt="remove"/>
+                      <img onClick={() => onRemove(obj.parentId)} className="removeBtn" src={"img/btn-remove.svg"} alt="remove"/>
                     </div>
                   ))
                 }
@@ -79,7 +79,7 @@ function Drawer({ onClose, items = [], onRemove, opened }) {
             </>
           :
             <Info
-              image={isOrderComplete ? "/img/complete-order.jpg" : "/img/empty-cart.jpg"}
+              image={isOrderComplete ? "img/complete-order.jpg" : "img/empty-cart.jpg"}
               title={isOrderComplete ? "Заказ оформлен" :"Корзина пустая"}
               description={isOrderComplete
                 ? `Ваш заказ #${orderId} скоро будет передан курьерской доставке`
